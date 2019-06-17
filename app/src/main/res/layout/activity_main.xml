@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.activities.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="Hello World!" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="text size" />
+
+    <com.q.sample.cleanarchitecture.views.customs.SeekBar
+        android:id="@+id/seekBarTextSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:max_value="50"
+        app:min_value="12"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="text color" />
+
+    <com.q.sample.cleanarchitecture.views.customs.RainbowColorPicker
+        android:id="@+id/textColorPicker"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp" />
+
+    <TextView
+        android:id="@+id/textColorIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_margin="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="background color" />
+
+    <com.q.sample.cleanarchitecture.views.customs.RainbowColorPicker
+        android:id="@+id/backgroundColorPicker"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp" />
+
+    <TextView
+        android:id="@+id/backgroundColorIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_margin="5dp" />
+
+    <Button
+        android:id="@+id/btnApply"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="Apply" />
+
+</LinearLayout>

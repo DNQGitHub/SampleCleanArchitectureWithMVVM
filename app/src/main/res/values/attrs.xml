@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SeekBar">
+        <attr name="min_value" format="float" />
+        <attr name="max_value" format="float" />
+        <attr name="value_bar_color" format="color|reference" />
+        <attr name="value_progress_bar_color" format="color|reference" />
+        <attr name="value_indicator_outer_circle_color" format="color|reference" />
+        <attr name="value_indicator_inner_circle_color" format="color|reference" />
+    </declare-styleable>
+</resources>
