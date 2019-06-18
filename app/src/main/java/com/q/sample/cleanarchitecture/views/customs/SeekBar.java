@@ -59,8 +59,18 @@ public class SeekBar extends View
     }
 
     public void setValue(float value) {
-        if(value < minValue) value = minValue;
-        else if(value > maxValue) value = maxValue;
+        if(maxValue < minValue) {
+            if(value < maxValue)
+                value = maxValue;
+            else if(value > minValue)
+                value = minValue;
+        } else {
+            if(value < minValue)
+                value = minValue;
+            else if(value > maxValue)
+                value = maxValue;
+        }
+
         if(this.value != value) {
             this.value = value;
             invalidate();
@@ -142,7 +152,7 @@ public class SeekBar extends View
         valueBar.y = getHeight() / 2;
         valueBar.length = getWidth() - getPaddingRight() - getPaddingLeft() - 2 * valueIndicator.outerCircleRadius;
 
-        valueIndicator.x = valueBar.x + (value - minValue) * valueBar.length / (maxValue - minValue);
+        valueIndicator.x = valueBar.x + Math.abs(value - minValue) * valueBar.length / Math.abs(maxValue - minValue);
         valueIndicator.y = getHeight() / 2;
     }
 
@@ -272,7 +282,7 @@ public class SeekBar extends View
         }
 
         void draw(Canvas canvas) {
-            x = valueBar.x + (value - minValue) * valueBar.length / (maxValue - minValue);
+            x = valueBar.x + Math.abs(value - minValue) * valueBar.length / Math.abs(maxValue - minValue);
 
             paint.setAntiAlias(true);
             paint.setColor(outerCircleColor);
